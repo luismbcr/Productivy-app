@@ -1,3 +1,10 @@
+*{
+  font-family: 'Adamina', serif;
+}
+
+body{
+  background: $color-mariner;
+}
 .main-container{
   display: flex;
   flex-direction: column;

@@ -1,3 +1,5 @@
-// @import './components/';
+@import 'general/variables';
+@import 'general/general';
 
-@import 'general';
+@import './components/header';
+@import './components/form';
