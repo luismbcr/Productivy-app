@@ -1,0 +1,27 @@
+.taskcontainer{
+  width: 95%;
+  text-align: center;
+}
+.tasklist{
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.task{
+  width: 140px;
+  background: #3498db;
+  border-radius: 6px;
+  padding: 13px;
+  color: white;
+  margin: 10px;
+  button{
+    margin: 12px 4px 0px;
+    background: #d35400;
+    padding: 8px;
+    &:last-child{
+      background: #f39c12;
+    }
+  }
+}

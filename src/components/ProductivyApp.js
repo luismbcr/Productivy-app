@@ -9,7 +9,18 @@ export default class ProductivityApp extends React.Component{
     super(props);
 
     this.state = {
-      tasks: []
+      tasks: [{
+        title : "title",
+        time : 60,
+        timeSpend: 0,
+        status: 1
+      },
+      {
+        title : "title",
+        time : 60,
+        timeSpend: 0,
+        status: 1
+      }]
     }
     this.handleForm = this.handleForm.bind(this);
   }

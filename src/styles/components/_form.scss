@@ -1,5 +1,18 @@
 form{
   input{
     margin-right: 10px;
+    padding: 7px;
+    border-radius: 7px;
+    border: none;
   }
+  #task{
+    width: 300px;
+  }
+  #time{
+    width: 40px;
+  }
+  button{
+    padding: 7px 25px;
+  }
+
 }

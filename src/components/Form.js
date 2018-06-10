@@ -37,7 +37,7 @@ export default class Form extends React.Component{
     return (
       <form onSubmit={this.handleForm} className="form-container">
         <input onChange={this.handleInput} type="text" id="task" placeholder="Enter task" />
-        <input onChange={this.handleInput} type="number" id="time" placeholder="Enter time minutes" />
+        <input onChange={this.handleInput} type="number" id="time" placeholder="0" />
         <button disabled={!this.state.disabled}>Add Task</button>
       </form>
     )

@@ -10,3 +10,13 @@ body{
   flex-direction: column;
   align-items: center;
 }
+button{
+  border-radius: 3px 14px;
+  background: $color-curious-blue;
+  border: none;
+  color: white;
+  font-weight: bold;
+  &:disabled{
+    opacity: 0.6;
+  }
+}
