@@ -10,8 +10,8 @@ const TaskView = (props)=> (
             {props.tasks.map((item, index)=>(
               <div className="task" key={index}>
                 <div>{item.title}</div>
-                <div>Tiempo: {item.time}</div>
-                <div>Gastado: {item.timeSpend}</div>
+                <div>Time: {item.time}</div>
+                <div>Spend: {item.timeSpend}</div>
               </div>
             ))}
         </div>

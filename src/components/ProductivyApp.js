@@ -9,26 +9,16 @@ export default class ProductivityApp extends React.Component{
     super(props);
 
     this.state = {
-      tasks: [
-        {
-          title: "task 1",
-          time: 60,
-          timeSpend: 10,
-          status: 1
-        },
-        {
-          title: "task 1",
-          time: 60,
-          timeSpend: 10,
-          status: 1
-        }
-      ]
+      tasks: []
     }
+    this.handleForm = this.handleForm.bind(this);
   }
 
-  handleForm(e){
-    e.preventDefault();
-    console.log(1);
+  handleForm = (task)=>{
+    //insert new task
+    this.setState((prevState)=>{
+      tasks: prevState.tasks.push(task);
+    });
   }
 
   render(){
@@ -38,7 +28,6 @@ export default class ProductivityApp extends React.Component{
         <Header title="Productivity" />
         <Form handleForm={this.handleForm}/>
         <TaskList tasks={this.state.tasks}  />
-
       </div>
     )
   }
