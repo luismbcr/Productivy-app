@@ -1,4 +1,5 @@
 import React from 'react';
+import Task from '../components/Task';
 
 const TaskView = (props)=> (
   <div className="taskcontainer">
@@ -10,13 +11,7 @@ const TaskView = (props)=> (
         <div className="tasklist" >
 
             {props.tasks.map((item, index)=>(
-              <div className="task" key={index}>
-                <div>{item.title}</div>
-                <div>Time: {item.time}</div>
-                <div>Spend: {item.timeSpend}</div>
-                <button>work</button>
-                <button>Done</button>
-              </div>
+              <Task key={index} title={item.title} time={item.time} timeSpend={item.timeSpend} handleDone={props.handleDone} />
             ))}
         </div>
       )

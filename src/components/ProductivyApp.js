@@ -9,20 +9,10 @@ export default class ProductivityApp extends React.Component{
     super(props);
 
     this.state = {
-      tasks: [{
-        title : "title",
-        time : 60,
-        timeSpend: 0,
-        status: 1
-      },
-      {
-        title : "title",
-        time : 60,
-        timeSpend: 0,
-        status: 1
-      }]
+      tasks: []
     }
     this.handleForm = this.handleForm.bind(this);
+    this.handleDone = this.handleDone.bind(this);
   }
 
   handleForm = (task)=>{
@@ -32,13 +22,20 @@ export default class ProductivityApp extends React.Component{
     });
   }
 
-  render(){
+  handleDone = (taskToRemove) =>{
+    this.setState((prevState) => ({
+      tasks: prevState.tasks.filter((task) => taskToRemove !== task.title)
+    }));
 
+  };
+
+
+  render(){
     return (
       <div className="main-container">
         <Header title="Productivity" />
         <Form handleForm={this.handleForm}/>
-        <TaskList tasks={this.state.tasks}  />
+        <TaskList tasks={this.state.tasks} handleDone={this.handleDone}  />
       </div>
     )
   }
