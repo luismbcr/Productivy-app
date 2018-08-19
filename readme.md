@@ -6,7 +6,10 @@ This is an application developed with React, scss and webpack.
 
 Keep track of your daily tasks, allow to assign time to each task, inspired for the Eisenhower Decision Matrix.
 
-## install Steps
+## Demo
+https://gracious-mclean-747ad2.netlify.com/
+
+## Setup Steps
 
 ```
 yarn install
